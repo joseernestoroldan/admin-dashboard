@@ -5,7 +5,6 @@
 
 .sidebar {
   flex: 1;
-  background-color: var(--bacground-soft);
   padding: 20px;
 }
 
