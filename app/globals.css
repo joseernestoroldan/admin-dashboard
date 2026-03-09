@@ -20,7 +20,7 @@
   --emerald-900: #064e3b;
 
   --background: var(--gray-900);
-  --bacground-soft: var(--gray-700);
+  --bacground-soft: var(--gray-800);
   --color-text-primary: var(--gray-200);
   --color-text-secondary: var(--gray-400);
 }
