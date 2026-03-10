@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import styles from "./page.dashboard.module.css";
 import Card from "@/components/card/Card";
 import { cards } from "@/utils/dataCards";
 import Chart from "@/components/chart/Chart";
