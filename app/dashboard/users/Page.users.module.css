@@ -28,13 +28,16 @@
   padding: 10px;
 }
 
-.product{
+.user{
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  gap: 5px;
+  color: #5d57c9;
+  font-weight: 700;
+  font-size: 14px;
 }
 
-.productImage{
+.userImage{
   border-radius: 50%;
   object-fit: cover;
 }

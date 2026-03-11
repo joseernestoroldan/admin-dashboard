@@ -32,7 +32,6 @@ const SingleProductPage = async ({ params }: { params: { id: string } }) => {
           />
           <label>Size</label>
           <textarea
-            type="text"
             name="size"
             placeholder={product.size || "size"}
           />

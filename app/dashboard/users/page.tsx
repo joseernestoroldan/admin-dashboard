@@ -5,13 +5,18 @@ import Search from "@/components/search/Search";
 import styles from "@/app/dashboard/users/Page.users.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { fetchUsers } from "@/db/client";
+import { UserType } from "@/types";
 
-const UsersPage = async ({ searchParams }: { searchParams: any }) => {
-  const q = searchParams?.q || "";
-  const page = searchParams?.page || 1;
-  // const { count, users } = await fetchUsers(q, page);
-    const count = 1
+interface SearchParams {
+  searchParams: Promise<{ q?: string; page?: string }>;
+}
 
+
+
+const UsersPage = async ({ searchParams }: SearchParams) => {
+  const { q = "", page = "1" } = await searchParams;
+  const { count, users } = await fetchUsers(q, page);
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -32,12 +37,12 @@ const UsersPage = async ({ searchParams }: { searchParams: any }) => {
           </tr>
         </thead>
         <tbody>
-          {/* {users.map((user) => (
+          {users.map((user) => (
             <tr key={user.id}>
               <td>
                 <div className={styles.user}>
                   <Image
-                    src={user.img || "/noavatar.png"}
+                    src={user.img || "/user.png"}
                     alt=""
                     width={40}
                     height={40}
@@ -57,16 +62,16 @@ const UsersPage = async ({ searchParams }: { searchParams: any }) => {
                       View
                     </button>
                   </Link>
-                  <form action={deleteUser}>
+                  {/* <form action={deleteUser}>
                     <input type="hidden" name="id" value={(user.id)} />
                     <button className={`${styles.button} ${styles.delete}`}>
                       Delete
                     </button>
-                  </form>
+                  </form> */}
                 </div>
               </td>
             </tr>
-          ))} */}
+          ))}
         </tbody>
       </table>
       <Pagination count={count} />
