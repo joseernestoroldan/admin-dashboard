@@ -3,9 +3,7 @@ import { User } from "./models";
 
 export const fetchUsers = async (q: string, page: string) => {
   const regex = new RegExp(q, "i");
-
-  const ITEM_PER_PAGE = 2;
-
+  const ITEM_PER_PAGE = 5;
   try {
     connectToDB();
     const count = await User.find({ username: { $regex: regex } }).countDocuments();
