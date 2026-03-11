@@ -1,0 +1,122 @@
+[
+  {
+    "username": "jdoe",
+    "email": "jdoe@example.com",
+    "password": "hashedpassword1",
+    "img": "https://randomuser.me/api/portraits/men/1.jpg",
+    "isAdmin": false,
+    "isActive": true,
+    "phone": "+12025550101",
+    "address": "123 Main St, New York, USA",
+    "createdAt": "2026-03-01T10:00:00.000Z",
+    "updatedAt": "2026-03-01T10:00:00.000Z"
+  },
+  {
+    "username": "asmith",
+    "email": "asmith@example.com",
+    "password": "hashedpassword2",
+    "img": "https://randomuser.me/api/portraits/women/2.jpg",
+    "isAdmin": true,
+    "isActive": true,
+    "phone": "+12025550102",
+    "address": "456 Oak Ave, Chicago, USA",
+    "createdAt": "2026-03-01T10:01:00.000Z",
+    "updatedAt": "2026-03-01T10:01:00.000Z"
+  },
+  {
+    "username": "mjordan",
+    "email": "mjordan@example.com",
+    "password": "hashedpassword3",
+    "img": "https://randomuser.me/api/portraits/men/3.jpg",
+    "isAdmin": false,
+    "isActive": true,
+    "phone": "+12025550103",
+    "address": "789 Pine Rd, Miami, USA",
+    "createdAt": "2026-03-01T10:02:00.000Z",
+    "updatedAt": "2026-03-01T10:02:00.000Z"
+  },
+  {
+    "username": "lwilson",
+    "email": "lwilson@example.com",
+    "password": "hashedpassword4",
+    "img": "https://randomuser.me/api/portraits/women/4.jpg",
+    "isAdmin": false,
+    "isActive": true,
+    "phone": "+12025550104",
+    "address": "321 Cedar St, Dallas, USA",
+    "createdAt": "2026-03-01T10:03:00.000Z",
+    "updatedAt": "2026-03-01T10:03:00.000Z"
+  },
+  {
+    "username": "bwayne",
+    "email": "bwayne@example.com",
+    "password": "hashedpassword5",
+    "img": "https://randomuser.me/api/portraits/men/5.jpg",
+    "isAdmin": true,
+    "isActive": true,
+    "phone": "+12025550105",
+    "address": "1007 Mountain Dr, Gotham",
+    "createdAt": "2026-03-01T10:04:00.000Z",
+    "updatedAt": "2026-03-01T10:04:00.000Z"
+  },
+  {
+    "username": "ckent",
+    "email": "ckent@example.com",
+    "password": "hashedpassword6",
+    "img": "https://randomuser.me/api/portraits/men/6.jpg",
+    "isAdmin": false,
+    "isActive": true,
+    "phone": "+12025550106",
+    "address": "344 Clinton St, Metropolis",
+    "createdAt": "2026-03-01T10:05:00.000Z",
+    "updatedAt": "2026-03-01T10:05:00.000Z"
+  },
+  {
+    "username": "dprince",
+    "email": "dprince@example.com",
+    "password": "hashedpassword7",
+    "img": "https://randomuser.me/api/portraits/women/7.jpg",
+    "isAdmin": false,
+    "isActive": true,
+    "phone": "+12025550107",
+    "address": "10 Amazon Way, Washington DC",
+    "createdAt": "2026-03-01T10:06:00.000Z",
+    "updatedAt": "2026-03-01T10:06:00.000Z"
+  },
+  {
+    "username": "pparker",
+    "email": "pparker@example.com",
+    "password": "hashedpassword8",
+    "img": "https://randomuser.me/api/portraits/men/8.jpg",
+    "isAdmin": false,
+    "isActive": false,
+    "phone": "+12025550108",
+    "address": "20 Ingram St, Queens, NY",
+    "createdAt": "2026-03-01T10:07:00.000Z",
+    "updatedAt": "2026-03-01T10:07:00.000Z"
+  },
+  {
+    "username": "tstark",
+    "email": "tstark@example.com",
+    "password": "hashedpassword9",
+    "img": "https://randomuser.me/api/portraits/men/9.jpg",
+    "isAdmin": true,
+    "isActive": true,
+    "phone": "+12025550109",
+    "address": "10880 Malibu Point, California",
+    "createdAt": "2026-03-01T10:08:00.000Z",
+    "updatedAt": "2026-03-01T10:08:00.000Z"
+  },
+  {
+    "username": "nsummers",
+    "email": "nsummers@example.com",
+    "password": "hashedpassword10",
+    "img": "https://randomuser.me/api/portraits/women/10.jpg",
+    "isAdmin": false,
+    "isActive": true,
+    "phone": "+12025550110",
+    "address": "742 Evergreen Terrace, Springfield",
+    "createdAt": "2026-03-01T10:09:00.000Z",
+    "updatedAt": "2026-03-01T10:09:00.000Z"
+  }
+]
