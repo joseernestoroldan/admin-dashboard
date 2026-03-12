@@ -17,3 +17,7 @@ export type UserType = {
   phone?: string;
   address?: string;
 };
+
+export type SearchParams = {
+  searchParams: Promise<{ q?: string; page?: string }>;
+}

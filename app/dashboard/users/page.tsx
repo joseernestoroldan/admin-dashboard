@@ -1,17 +1,10 @@
-// import { deleteUser } from "@/app/lib/actions";
-// import { fetchUsers } from "@/app/lib/data";
 import Pagination from "@/components/pagination/Pagination";
 import Search from "@/components/search/Search";
 import styles from "@/app/dashboard/users/Page.users.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { fetchUsers } from "@/db/client";
-import { UserType } from "@/types";
-
-interface SearchParams {
-  searchParams: Promise<{ q?: string; page?: string }>;
-}
-
+import { SearchParams } from "@/types";
 
 
 const UsersPage = async ({ searchParams }: SearchParams) => {
@@ -42,7 +35,7 @@ const UsersPage = async ({ searchParams }: SearchParams) => {
               <td>
                 <div className={styles.user}>
                   <Image
-                    src={user.img || "/user.png"}
+                    src={user.img || "/noavatar.png"}
                     alt=""
                     width={40}
                     height={40}

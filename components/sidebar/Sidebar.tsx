@@ -8,7 +8,7 @@ const Sidebar = () => {
     <div className={styles.container}>
       <div className={styles.user}>
         <img
-          src="/user.png"
+          src="/noavatar.png"
           alt="user"
           width={50}
           height={50}

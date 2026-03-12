@@ -3,14 +3,13 @@ import Link from "next/link";
 import styles from "@/app/dashboard/products/Page.products.module.css";
 import Search from "@/components/search/Search";
 import Pagination from "@/components/pagination/Pagination";
-// import { fetchProducts } from "@/app/lib/data";
-// import { deleteProduct } from "@/app/lib/actions";
+import { SearchParams } from "@/types";
+import { fetchProducts } from "@/db/client";
 
-const ProductsPage = async ({ searchParams }: { searchParams: any }) => {
-  const q = searchParams?.q || "";
-  const page = searchParams?.page || 1;
-  // const { count, products } = await fetchProducts(q, page);
-  const count = 1
+
+const ProductsPage = async ({ searchParams }: SearchParams) => {
+ const { q = "", page = "1" } = await searchParams;
+  const { count, products } = await fetchProducts(q, page);
 
   return (
     <div className={styles.container}>
@@ -29,15 +28,15 @@ const ProductsPage = async ({ searchParams }: { searchParams: any }) => {
             <td>Created At</td>
             <td>Stock</td>
             <td>Action</td>
-          </tr>
+          </tr> 
         </thead>
         <tbody>
-          {/* {products.map((product) => (
+          {products.map((product) => (
             <tr key={product.id}>
               <td>
                 <div className={styles.product}>
                   <Image
-                    src={product.img || "/noproduct.jpg"}
+                    src={product.img || "/noproduct.png"}
                     alt=""
                     width={40}
                     height={40}
@@ -57,16 +56,16 @@ const ProductsPage = async ({ searchParams }: { searchParams: any }) => {
                       View
                     </button>
                   </Link>
-                  <form action={deleteProduct}>
+                  {/* <form action={deleteProduct}>
                     <input type="hidden" name="id" value={product.id} />
                     <button className={`${styles.button} ${styles.delete}`}>
                       Delete
                     </button>
-                  </form>
+                  </form> */}
                 </div>
               </td>
             </tr>
-          ))} */}
+          ))}
         </tbody>
       </table>
       <Pagination count={count} />

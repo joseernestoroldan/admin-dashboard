@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Classic White T-Shirt",
+    "desc": "Comfortable cotton t-shirt for everyday wear.",
+    "price": 19.99,
+    "stock": 120,
+    "img": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+    "color": "White",
+    "size": "M",
+    "createdAt": "2026-03-01T10:00:00.000Z",
+    "updatedAt": "2026-03-01T10:00:00.000Z"
+  },
+  {
+    "title": "Black Hoodie",
+    "desc": "Warm hoodie with front pocket and adjustable hood.",
+    "price": 49.99,
+    "stock": 80,
+    "img": "https://images.unsplash.com/photo-1556821840-3a63f95609a7",
+    "color": "Black",
+    "size": "L",
+    "createdAt": "2026-03-01T10:05:00.000Z",
+    "updatedAt": "2026-03-01T10:05:00.000Z"
+  },
+  {
+    "title": "Blue Denim Jacket",
+    "desc": "Classic denim jacket with durable stitching.",
+    "price": 79.99,
+    "stock": 45,
+    "img": "https://images.unsplash.com/photo-1542272604-787c3835535d",
+    "color": "Blue",
+    "size": "M",
+    "createdAt": "2026-03-01T10:10:00.000Z",
+    "updatedAt": "2026-03-01T10:10:00.000Z"
+  },
+  {
+    "title": "Red Sports Cap",
+    "desc": "Lightweight sports cap with breathable fabric.",
+    "price": 15.5,
+    "stock": 200,
+    "img": "https://images.unsplash.com/photo-1521369909029-2afed882baee",
+    "color": "Red",
+    "size": "One Size",
+    "createdAt": "2026-03-01T10:15:00.000Z",
+    "updatedAt": "2026-03-01T10:15:00.000Z"
+  },
+  {
+    "title": "Running Sneakers",
+    "desc": "Comfortable sneakers designed for running and training.",
+    "price": 95.0,
+    "stock": 60,
+    "img": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+    "color": "Gray",
+    "size": "42",
+    "createdAt": "2026-03-01T10:20:00.000Z",
+    "updatedAt": "2026-03-01T10:20:00.000Z"
+  },
+  {
+    "title": "Leather Wallet",
+    "desc": "Minimalist leather wallet with multiple card slots.",
+    "price": 35.0,
+    "stock": 150,
+    "img": "https://images.unsplash.com/photo-1601597111158-2fceff292cdc",
+    "color": "Brown",
+    "size": "Standard",
+    "createdAt": "2026-03-01T10:25:00.000Z",
+    "updatedAt": "2026-03-01T10:25:00.000Z"
+  },
+  {
+    "title": "Sport Shorts",
+    "desc": "Breathable athletic shorts ideal for gym workouts.",
+    "price": 25.75,
+    "stock": 90,
+    "img": "https://images.unsplash.com/photo-1593032465175-481ac7f401a0",
+    "color": "Black",
+    "size": "M",
+    "createdAt": "2026-03-01T10:30:00.000Z",
+    "updatedAt": "2026-03-01T10:30:00.000Z"
+  },
+  {
+    "title": "Winter Beanie",
+    "desc": "Warm knitted beanie for cold weather.",
+    "price": 18.99,
+    "stock": 130,
+    "img": "https://images.unsplash.com/photo-1548883354-94bcfe321cbb",
+    "color": "Dark Gray",
+    "size": "One Size",
+    "createdAt": "2026-03-01T10:35:00.000Z",
+    "updatedAt": "2026-03-01T10:35:00.000Z"
+  },
+  {
+    "title": "Casual Backpack",
+    "desc": "Stylish backpack with laptop compartment.",
+    "price": 65.0,
+    "stock": 70,
+    "img": "https://images.unsplash.com/photo-1509762774605-f07235a08f1f",
+    "color": "Navy",
+    "size": "Standard",
+    "createdAt": "2026-03-01T10:40:00.000Z",
+    "updatedAt": "2026-03-01T10:40:00.000Z"
+  },
+  {
+    "title": "Slim Fit Jeans",
+    "desc": "Modern slim fit jeans with stretch fabric.",
+    "price": 59.99,
+    "stock": 110,
+    "img": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246",
+    "color": "Dark Blue",
+    "size": "32",
+    "createdAt": "2026-03-01T10:45:00.000Z",
+    "updatedAt": "2026-03-01T10:45:00.000Z"
+  }
+]

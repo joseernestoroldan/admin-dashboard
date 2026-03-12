@@ -1,22 +1,23 @@
 // import { updateProduct } from "@/app/lib/actions";
-// import { fetchProduct } from "@/app/lib/data";
+
 import styles from "./Page.singleProduct.module.css";
 import Image from "next/image";
+import { fetchProduct } from "@/db/client";
 
-const SingleProductPage = async ({ params }: { params: { id: string } }) => {
-//   const { id } = params;
-//   const product = await fetchProduct(id);
+const SingleProductPage = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
+  const product = await fetchProduct(id);
 
   return (
     <div className={styles.container}>
-      {/* <div className={styles.infoContainer}>
+      <div className={styles.infoContainer}>
         <div className={styles.imgContainer}>
-          <Image src="/noavatar.png" alt="" fill />
+          <Image src={product.img || "/noproduct.png"} alt="" fill />
         </div>
         {product.title}
       </div>
       <div className={styles.formContainer}>
-        <form action={updateProduct} className={styles.form}>
+        <form action={"updateProduct"} className={styles.form}>
           <input type="hidden" name="id" value={product.id} />
           <label>Title</label>
           <input type="text" name="title" placeholder={product.title} />
@@ -49,7 +50,7 @@ const SingleProductPage = async ({ params }: { params: { id: string } }) => {
           ></textarea>
           <button>Update</button>
         </form>
-      </div> */}
+      </div>
     </div>
   );
 };
