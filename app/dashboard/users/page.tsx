@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { fetchUsers } from "@/db/client";
 import { SearchParams } from "@/types";
+import { deleteUser } from "@/app/actions/actions";
 
 
 const UsersPage = async ({ searchParams }: SearchParams) => {
@@ -55,12 +56,12 @@ const UsersPage = async ({ searchParams }: SearchParams) => {
                       View
                     </button>
                   </Link>
-                  {/* <form action={deleteUser}>
+                  <form action={deleteUser}>
                     <input type="hidden" name="id" value={(user.id)} />
                     <button className={`${styles.button} ${styles.delete}`}>
                       Delete
                     </button>
-                  </form> */}
+                  </form>
                 </div>
               </td>
             </tr>

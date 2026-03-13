@@ -12,6 +12,7 @@ export const fetchUsers = async (q: string, page: string) => {
       .skip(ITEM_PER_PAGE * (parseInt(page) - 1));
     return { count, users };
   } catch (err) {
+    console.error("fetchUsers error:", err);
     throw new Error("Failed to fetch users!");
   }
 };

@@ -1,4 +1,4 @@
-// import { updateUser } from "@/app/lib/actions";
+ import { updateUser } from "@/app/actions/actions";
 import { fetchUser } from "@/db/client";
 import styles from "./Page.SingleUser.module.css";
 import Image from "next/image";
@@ -21,7 +21,7 @@ const SingleUserPage = async ({
         {user.username}
       </div>
       <div className={styles.formContainer}>
-        <form action={"updateUser"} className={styles.form}>
+        <form action={updateUser} className={styles.form}>
           <input type="hidden" name="id" value={user.id}/>
           <label>Username</label>
           <input type="text" name="username" placeholder={user.username} />

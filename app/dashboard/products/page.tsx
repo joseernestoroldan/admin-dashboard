@@ -5,6 +5,7 @@ import Search from "@/components/search/Search";
 import Pagination from "@/components/pagination/Pagination";
 import { SearchParams } from "@/types";
 import { fetchProducts } from "@/db/client";
+import { deleteProduct } from "@/app/actions/actions";
 
 
 const ProductsPage = async ({ searchParams }: SearchParams) => {
@@ -56,12 +57,12 @@ const ProductsPage = async ({ searchParams }: SearchParams) => {
                       View
                     </button>
                   </Link>
-                  {/* <form action={deleteProduct}>
+                  <form action={deleteProduct}>
                     <input type="hidden" name="id" value={product.id} />
                     <button className={`${styles.button} ${styles.delete}`}>
                       Delete
                     </button>
-                  </form> */}
+                  </form>
                 </div>
               </td>
             </tr>

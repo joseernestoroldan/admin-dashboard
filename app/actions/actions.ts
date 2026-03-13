@@ -90,7 +90,6 @@ export const addProduct = async (formData: FormData) => {
 
     await newProduct.save();
   } catch (err) {
-    console.log(err);
     throw new Error("Failed to create product!");
   }
 

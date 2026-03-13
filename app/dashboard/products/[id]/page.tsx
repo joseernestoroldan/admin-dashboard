@@ -1,10 +1,14 @@
-// import { updateProduct } from "@/app/lib/actions";
+import { updateProduct } from "@/app/actions/actions";
 
 import styles from "./Page.singleProduct.module.css";
 import Image from "next/image";
 import { fetchProduct } from "@/db/client";
 
-const SingleProductPage = async ({ params }: { params: Promise<{ id: string }> }) => {
+const SingleProductPage = async ({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) => {
   const { id } = await params;
   const product = await fetchProduct(id);
 
@@ -17,7 +21,7 @@ const SingleProductPage = async ({ params }: { params: Promise<{ id: string }> }
         {product.title}
       </div>
       <div className={styles.formContainer}>
-        <form action={"updateProduct"} className={styles.form}>
+        <form action={updateProduct} className={styles.form}>
           <input type="hidden" name="id" value={product.id} />
           <label>Title</label>
           <input type="text" name="title" placeholder={product.title} />
@@ -32,10 +36,7 @@ const SingleProductPage = async ({ params }: { params: Promise<{ id: string }> }
             placeholder={product.color || "color"}
           />
           <label>Size</label>
-          <textarea
-            name="size"
-            placeholder={product.size || "size"}
-          />
+          <textarea name="size" placeholder={product.size || "size"} />
           <label>Cat</label>
           <select name="cat" id="cat">
             <option value="kitchen">Kitchen</option>
@@ -46,8 +47,7 @@ const SingleProductPage = async ({ params }: { params: Promise<{ id: string }> }
             name="desc"
             id="desc"
             rows={10}
-            placeholder={product.desc}
-          ></textarea>
+            placeholder={product.desc}></textarea>
           <button>Update</button>
         </form>
       </div>

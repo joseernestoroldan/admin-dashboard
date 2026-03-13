@@ -2,7 +2,7 @@ import { setServers } from "node:dns";
 import mongoose from "mongoose";
 
 // DNS stability for some environments (optional but kept as requested)
-setServers(["8.8.8.8", "1.1.1.1"]);
+setServers(["8.8.4.4", "8.8.8.8"]);
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
