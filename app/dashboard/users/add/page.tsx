@@ -1,9 +1,10 @@
 import styles from "./Page.addUsers.module.css";
+import { addUser } from "@/app/actions/actions";
 
 const AddUserPage = () => {
   return (
     <div className={styles.container}>
-      <form action={"addUser"} className={styles.form}>
+      <form action={addUser} className={styles.form}>
         <input type="text" placeholder="username" name="username" required />
         <select name="cat" id="cat">
           <option value="general">Choose a Category</option>

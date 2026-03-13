@@ -12,7 +12,6 @@ export const addUser = async (formData: FormData) => {
 
   try {
     await connectToDB();
-
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password as string, salt);
 
@@ -28,7 +27,6 @@ export const addUser = async (formData: FormData) => {
 
     await newUser.save();
   } catch (err) {
-    console.log(err);
     throw new Error("Failed to create user!");
   }
 
