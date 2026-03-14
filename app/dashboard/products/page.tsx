@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "@/app/dashboard/products/Page.products.module.css";
+import styles from "@/styles/table-page.module.css";
 import Search from "@/components/search/Search";
 import Pagination from "@/components/pagination/Pagination";
 import { SearchParams } from "@/types";
@@ -35,13 +35,13 @@ const ProductsPage = async ({ searchParams }: SearchParams) => {
           {products.map((product) => (
             <tr key={product.id}>
               <td>
-                <div className={styles.product}>
+                <div className={styles.entity}>
                   <Image
                     src={product.img || "/noproduct.png"}
                     alt=""
                     width={40}
                     height={40}
-                    className={styles.productImage}
+                    className={styles.entityImage}
                   />
                   {product.title}
                 </div>

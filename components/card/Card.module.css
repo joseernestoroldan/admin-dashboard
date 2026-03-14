@@ -1,37 +1,59 @@
+/* ============================================
+   CARD — Dashboard KPI Card
+   ============================================ */
+
 .container {
-  background-color: var(--background-soft);
-  padding: 20px;
-  border-radius: 10px;
+  background: linear-gradient(135deg, var(--background-soft), var(--surface-elevated));
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
   display: flex;
-  gap: 20px;
+  gap: var(--space-xl);
   cursor: pointer;
   width: 100%;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
 }
 
-.container:hover{
-  background-color: #2e374a;
+.container:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(99, 102, 241, 0.2);
 }
 
 .texts {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--space-md);
+}
+
+.title {
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .number {
-  font-size: 24px;
-  font-weight: 500;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
 }
 
 .detail {
-  font-size: 14px;
-  font-weight: 300;
+  font-size: var(--text-xs);
+  font-weight: var(--font-normal);
+  color: var(--color-text-secondary);
 }
 
 .positive {
-  color: lime;
+  color: var(--emerald-400);
+  font-weight: var(--font-semibold);
 }
 
 .negative {
-  color: red;
+  color: var(--rose-400);
+  font-weight: var(--font-semibold);
 }

@@ -1,4 +1,4 @@
-import styles from "./Page.addProducts.module.css";
+import styles from "@/styles/form-page.module.css";
 import { addProduct } from "@/app/actions/actions";
 
 const AddProductPage = () => {
@@ -11,8 +11,9 @@ const AddProductPage = () => {
           <option value="kitchen">Kitchen</option>
           <option value="phone">Phone</option>
           <option value="computer">Computer</option>
+          <option value="computer">Cloth</option>
         </select>
-        <input type="number" placeholder="price" name="price" required />
+        <input type="text" placeholder="price" name="price" required />
         <input type="number" placeholder="stock" name="stock" required />
         <input type="text" placeholder="color" name="color" />
         <input type="text" placeholder="size" name="size" />

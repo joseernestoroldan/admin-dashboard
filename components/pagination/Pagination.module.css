@@ -1,14 +1,40 @@
-.container{
-  padding: 10px;
+/* ============================================
+   PAGINATION — Page Navigation
+   ============================================ */
+
+.container {
+  padding: var(--space-xl) 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-md);
 }
 
-.button{
-  padding: 5px 10px;
+.button {
+  padding: var(--space-sm) var(--space-xl);
   cursor: pointer;
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  transition: all var(--transition-normal);
 }
 
-.button:disabled{
+.button:hover:not(:disabled) {
+  background: var(--surface-hover);
+  border-color: var(--primary-500);
+  color: var(--primary-400);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.button:disabled {
   cursor: not-allowed;
+  opacity: 0.35;
+  color: var(--color-text-secondary);
 }

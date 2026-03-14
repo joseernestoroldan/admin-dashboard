@@ -1,45 +1,79 @@
+/* ============================================
+   NAVBAR — Top Bar
+   ============================================ */
+
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background-soft);
-    padding: 20px;
-    border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-soft);
+  padding: var(--space-lg) var(--space-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
 }
 
-.title{
-    color: var(--color-text-secondary);
-    font-weight: bold;
-    text-transform: capitalize;
-    font-size: 20px;
+.title {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-semibold);
+  text-transform: capitalize;
+  font-size: var(--text-lg);
+  letter-spacing: -0.01em;
 }
 
-.menu{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
 }
 
-.search{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: var(--gray-700);
-    padding: 10px;
-    border-radius: 5px;
+.search {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background-color: var(--background);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+  color: var(--color-text-secondary);
 }
 
-.input{
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: var(--color-text-primary);
-    font-size: 16px;
+.search:focus-within {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
-.icons{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--gray-400);
+.input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  width: 180px;
+}
+
+.input::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  color: var(--color-text-secondary);
+}
+
+.icons > * {
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  padding: var(--space-xs);
+  border-radius: var(--radius-sm);
+}
+
+.icons > *:hover {
+  color: var(--color-text-primary);
+  background-color: var(--surface-hover);
+  transform: scale(1.1);
 }

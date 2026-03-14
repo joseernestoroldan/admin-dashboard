@@ -1,6 +1,6 @@
 import Pagination from "@/components/pagination/Pagination";
 import Search from "@/components/search/Search";
-import styles from "@/app/dashboard/users/Page.users.module.css";
+import styles from "@/styles/table-page.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { fetchUsers } from "@/db/client";
@@ -34,13 +34,13 @@ const UsersPage = async ({ searchParams }: SearchParams) => {
           {users.map((user) => (
             <tr key={user.id}>
               <td>
-                <div className={styles.user}>
+                <div className={styles.entity}>
                   <Image
                     src={user.img || "/noavatar.png"}
                     alt=""
                     width={40}
                     height={40}
-                    className={styles.userImage}
+                    className={styles.entityImage}
                   />
                   {user.username}
                 </div>

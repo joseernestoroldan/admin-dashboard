@@ -1,6 +1,6 @@
- import { updateUser } from "@/app/actions/actions";
+import { updateUser } from "@/app/actions/actions";
 import { fetchUser } from "@/db/client";
-import styles from "./Page.SingleUser.module.css";
+import styles from "@/styles/detail-page.module.css";
 import Image from "next/image";
 
 const SingleUserPage = async ({

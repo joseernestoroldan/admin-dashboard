@@ -1,6 +1,5 @@
 import { updateProduct } from "@/app/actions/actions";
-
-import styles from "./Page.singleProduct.module.css";
+import styles from "@/styles/detail-page.module.css";
 import Image from "next/image";
 import { fetchProduct } from "@/db/client";
 

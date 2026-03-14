@@ -1,20 +1,25 @@
+/* ============================================
+   DASHBOARD PAGE — Main Content
+   ============================================ */
+
 .wrapper {
   display: flex;
-  gap: 10px;
-  padding-top: 10px;
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
 }
 
 .main {
   flex: 3;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-xl);
+  min-width: 0;
 }
 
 .cards {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: var(--space-lg);
 }
 
 .side {

@@ -1,49 +1,91 @@
-.container{
+/* ============================================
+   TRANSACTIONS — Latest Transactions Table
+   ============================================ */
+
+.container {
   background-color: var(--background-soft);
-  padding: 20px;
-  border-radius:10px ;
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
 }
 
-.title{
-  margin-bottom: 20px;
-  font-weight: 200;
+.title {
+  margin-bottom: var(--space-xl);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
   color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
-.table{
+.table {
   width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
-.table td{
-  padding: 10px;
+.table thead tr {
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
-.user{
+.table thead td {
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+.table tbody tr:hover {
+  background-color: var(--surface-hover);
+}
+
+.table td {
+  padding: var(--space-md) var(--space-lg);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid rgba(55, 65, 81, 0.3);
+}
+
+.user {
   display: flex;
-  gap: 10px;
+  gap: var(--space-md);
   align-items: center;
+  color: var(--color-text-primary);
+  font-weight: var(--font-medium);
 }
 
-.userImage{
+.userImage {
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--border-color);
 }
 
-.status{
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 14px;
-  color: white;
+.status {
+  border-radius: var(--radius-full);
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.02em;
+  display: inline-block;
 }
 
-.pending{
-  background-color: #f7cb7375;
+.pending {
+  background-color: rgba(251, 191, 36, 0.15);
+  color: var(--amber-400);
 }
 
-.done{
-  background-color: #afd6ee75;
+.done {
+  background-color: rgba(52, 211, 153, 0.15);
+  color: var(--emerald-400);
 }
 
-.cancelled{
-  background-color: #f7737375;
+.cancelled {
+  background-color: rgba(251, 113, 133, 0.15);
+  color: var(--rose-400);
 }

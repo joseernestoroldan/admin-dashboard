@@ -1,7 +1,11 @@
+/* ============================================
+   DASHBOARD LAYOUT — Main Shell
+   ============================================ */
+
 .container {
   display: flex;
-  gap: 10px;
-  padding: 10px;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
 }
 
 .sidebar {
@@ -11,5 +15,12 @@
 
 .main {
   flex: 4;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  min-width: 0;
+}
+
+.content {
+  flex: 1;
 }

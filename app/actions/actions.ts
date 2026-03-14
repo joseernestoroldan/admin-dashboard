@@ -1,31 +1,28 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { Product, User } from "@/db/models";
-import { connectToDB } from "@/db/db";
 import { redirect } from "next/navigation";
+import { db } from "@/db/db";
 import bcrypt from "bcryptjs";
 
 export const addUser = async (formData: FormData) => {
   const { username, email, password, phone, address, isAdmin, isActive } =
     Object.fromEntries(formData);
-
   try {
-    await connectToDB();
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password as string, salt);
-
-    const newUser = new User({
-      username,
-      email,
-      password: hashedPassword,
-      phone,
-      address,
-      isAdmin,
-      isActive,
+    await db.user.create({
+      data: {
+        username: username as string,
+        email: email as string,
+        password: hashedPassword,
+        phone: phone as string,
+        address: address as string,
+        isAdmin: isAdmin === "true",
+        isActive: isActive === "true",
+        
+      },
     });
-
-    await newUser.save();
   } catch (err) {
     throw new Error("Failed to create user!");
   }
@@ -37,34 +34,22 @@ export const addUser = async (formData: FormData) => {
 export const updateUser = async (formData: FormData) => {
   const { id, username, email, password, phone, address, isAdmin, isActive } =
     Object.fromEntries(formData);
-
   try {
-    await connectToDB();
-
-    const updateFields: any = {
-      username,
-      email,
-      password,
-      phone,
-      address,
-      isAdmin,
-      isActive,
-    };
-
-    Object.keys(updateFields).forEach(
-      (key) =>
-        (updateFields[key] === "" || updateFields[key] === undefined) &&
-        delete updateFields[key]
-    );
-
-    if (updateFields.password) {
-      const salt = await bcrypt.genSalt(10);
-      updateFields.password = await bcrypt.hash(updateFields.password, salt);
-    }
-
-    await User.findByIdAndUpdate(id, updateFields);
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password as string, salt);
+    await db.user.update({
+      where: { id: id as string },
+      data: {
+        username: username as string,
+        email: email as string,
+        password: hashedPassword,
+        phone: phone as string,
+        address: address as string,
+        isAdmin: isAdmin === "true",
+        isActive: isActive === "true",
+      },
+    });
   } catch (err) {
-    console.log(err);
     throw new Error("Failed to update user!");
   }
 
@@ -72,23 +57,33 @@ export const updateUser = async (formData: FormData) => {
   redirect("/dashboard/users");
 };
 
+export const deleteUser = async (formData: FormData) => {
+  const { id } = Object.fromEntries(formData);
+  try {
+    await db.user.delete({
+      where: { id: id as string },
+    });
+  } catch (err) {
+    throw new Error("Failed to delete user!");
+  }
+
+  revalidatePath("/dashboard/users");
+};
+
 export const addProduct = async (formData: FormData) => {
   const { title, desc, price, stock, color, size } =
     Object.fromEntries(formData);
-
   try {
-    await connectToDB();
-
-    const newProduct = new Product({
-      title,
-      desc,
-      price: Number(price),
-      stock: Number(stock),
-      color,
-      size,
+    await db.product.create({
+      data: {
+        title: title as string,
+        desc: desc as string,
+        price: Number(price),
+        stock: Number(stock),
+        color: color as string,
+        size: size as string,
+      },
     });
-
-    await newProduct.save();
   } catch (err) {
     throw new Error("Failed to create product!");
   }
@@ -100,28 +95,19 @@ export const addProduct = async (formData: FormData) => {
 export const updateProduct = async (formData: FormData) => {
   const { id, title, desc, price, stock, color, size } =
     Object.fromEntries(formData);
-
   try {
-    await connectToDB();
-
-    const updateFields: any = {
-      title,
-      desc,
-      price: price ? Number(price) : undefined,
-      stock: stock ? Number(stock) : undefined,
-      color,
-      size,
-    };
-
-    Object.keys(updateFields).forEach(
-      (key) =>
-        (updateFields[key] === "" || updateFields[key] === undefined) &&
-        delete updateFields[key]
-    );
-
-    await Product.findByIdAndUpdate(id, updateFields);
+    await db.product.update({
+      where: { id: id as string },
+      data: {
+        title: title as string,
+        desc: desc as string,
+        price: Number(price),
+        stock: Number(stock),
+        color: color as string,
+        size: size as string,
+      },
+    });
   } catch (err) {
-    console.log(err);
     throw new Error("Failed to update product!");
   }
 
@@ -129,30 +115,17 @@ export const updateProduct = async (formData: FormData) => {
   redirect("/dashboard/products");
 };
 
-export const deleteUser = async (formData: FormData) => {
-  const { id } = Object.fromEntries(formData);
-
-  try {
-    await connectToDB();
-    await User.findByIdAndDelete(id);
-  } catch (err) {
-    console.log(err);
-    throw new Error("Failed to delete user!");
-  }
-
-  revalidatePath("/dashboard/users");
-};
-
 export const deleteProduct = async (formData: FormData) => {
   const { id } = Object.fromEntries(formData);
-
   try {
-    await connectToDB();
-    await Product.findByIdAndDelete(id);
+    await db.product.delete({
+      where: { id: id as string },
+    });
   } catch (err) {
-    console.log(err);
     throw new Error("Failed to delete product!");
   }
 
   revalidatePath("/dashboard/products");
 };
+
+
