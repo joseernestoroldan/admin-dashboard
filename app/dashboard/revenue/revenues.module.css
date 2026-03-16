@@ -5,32 +5,31 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
-  padding: var(--space-lg);
+  gap: 10px;
 }
 
 .title {
   font-size: var(--text-2xl);
   font-weight: var(--font-bold);
   color: var(--color-text-primary);
-  margin-bottom: var(--space-sm);
+  margin-bottom: 10px;
 }
 
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--space-xl);
+  gap: 10px;
 }
 
 .card {
   background: linear-gradient(135deg, var(--background-soft), var(--surface-elevated));
-  padding: var(--space-2xl);
+  padding: 10px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: 10px;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
@@ -78,18 +77,18 @@
 .chartsGrid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: var(--space-xl);
+  gap: 10px;
 }
 
 .chartCard {
   background-color: var(--background-soft);
-  padding: var(--space-2xl);
+  padding: 10px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
+  gap: 10px;
 }
 
 .chartTitle {
@@ -100,7 +99,7 @@
 
 .tableSection {
   background-color: var(--background-soft);
-  padding: var(--space-2xl);
+  padding: 10px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);

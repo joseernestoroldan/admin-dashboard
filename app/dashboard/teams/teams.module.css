@@ -5,8 +5,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
-  padding: var(--space-lg);
+  gap: 10px;
 }
 
 .titleSection {
@@ -31,12 +30,12 @@
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-xl);
+  gap: 10px;
 }
 
 .statCard {
   background: linear-gradient(135deg, var(--background-soft), var(--surface-elevated));
-  padding: var(--space-2xl);
+  padding: 10px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
@@ -84,12 +83,12 @@
 .charts {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: var(--space-xl);
+  gap: 10px;
 }
 
 .chartCard {
   background-color: var(--background-soft);
-  padding: var(--space-2xl);
+  padding: 10px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
@@ -111,7 +110,7 @@
 /* Teams Table */
 .tableCard {
   background-color: var(--background-soft);
-  padding: var(--space-2xl);
+  padding: 10px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);

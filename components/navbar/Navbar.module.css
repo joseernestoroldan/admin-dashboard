@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--background-soft);
-  padding: var(--space-lg) var(--space-xl);
+  padding: 10px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
 }
@@ -23,15 +23,15 @@
 .menu {
   display: flex;
   align-items: center;
-  gap: var(--space-xl);
+  gap: 10px;
 }
 
 .search {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: 10px;
   background-color: var(--background);
-  padding: var(--space-sm) var(--space-lg);
+  padding: 10px;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-color);
   transition: all var(--transition-normal);
@@ -61,7 +61,7 @@
 .icons {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: 10px;
   color: var(--color-text-secondary);
 }
 

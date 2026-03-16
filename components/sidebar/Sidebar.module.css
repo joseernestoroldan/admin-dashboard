@@ -4,11 +4,11 @@
 
 .container {
   position: sticky;
-  top: var(--space-md);
+  top: 10px;
   background-color: var(--background-soft);
   border-radius: var(--radius-lg);
-  padding: var(--space-xl);
-  min-height: calc(100vh - var(--space-xl));
+  padding: 10px;
+  min-height: calc(100vh - 10px);
   border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
@@ -17,9 +17,9 @@
 .user {
   display: flex;
   align-items: center;
-  gap: var(--space-lg);
-  margin-bottom: var(--space-2xl);
-  padding-bottom: var(--space-xl);
+  gap: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -63,12 +63,12 @@
   color: var(--color-text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin: var(--space-xl) 0 var(--space-sm) 0;
+  margin: 10px 0 10px 0;
 }
 
 .logout {
   margin-top: auto;
-  padding-top: var(--space-xl);
+  padding-top: 10px;
   border-top: 1px solid var(--border-color);
 }
 

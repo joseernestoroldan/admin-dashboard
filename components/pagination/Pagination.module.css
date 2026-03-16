@@ -3,15 +3,15 @@
    ============================================ */
 
 .container {
-  padding: var(--space-xl) 0;
+  padding: 10px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: var(--space-md);
+  margin-top: 10px;
 }
 
 .button {
-  padding: var(--space-sm) var(--space-xl);
+  padding: 10px;
   cursor: pointer;
   background: transparent;
   color: var(--color-text-primary);

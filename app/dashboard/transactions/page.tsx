@@ -130,7 +130,7 @@ export default function TransactionsPage() {
             </div>
           </div>
           
-          <div style={{ width: "100%", height: 320, marginTop: "20px" }}>
+          <div style={{ width: "100%", height: 320 }}>
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                 <defs>

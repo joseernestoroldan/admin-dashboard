@@ -6,8 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: var(--space-3xl);
-  padding-top: var(--space-xl);
+  margin-top: 10px;
+  padding-top: 10px;
   border-top: 1px solid var(--border-color);
   color: var(--color-text-secondary);
 }

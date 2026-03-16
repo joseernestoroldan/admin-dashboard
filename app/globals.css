@@ -64,6 +64,10 @@
   --space-3xl: 32px;
   --space-4xl: 40px;
 
+  /* ── Standardized Dashboard Spacing ── */
+  --space-dashboard: 10px;
+
+
   /* ── Typography ── */
   --font-sans: var(--font-inter), 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;

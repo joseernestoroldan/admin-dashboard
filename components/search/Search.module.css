@@ -5,9 +5,9 @@
 .container {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: 10px;
   background-color: var(--background);
-  padding: var(--space-sm) var(--space-lg);
+  padding: 10px;
   border-radius: var(--radius-full);
   width: max-content;
   border: 1px solid var(--border-color);

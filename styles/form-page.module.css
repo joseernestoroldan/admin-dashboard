@@ -5,9 +5,9 @@
 
 .container {
   background-color: var(--background-soft);
-  padding: var(--space-3xl);
+  padding: 10px;
   border-radius: var(--radius-lg);
-  margin-top: var(--space-md);
+  margin-top: 10px;
   border: 1px solid var(--border-color);
 }
 
@@ -15,13 +15,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: var(--space-xl);
+  gap: 10px;
 }
 
 .form input,
 .form textarea,
 .form select {
-  padding: var(--space-lg) var(--space-xl);
+  padding: 10px;
   background-color: var(--background);
   color: var(--color-text-primary);
   border: 1px solid var(--border-color);
@@ -58,7 +58,7 @@
 
 .form button {
   width: 100%;
-  padding: var(--space-lg) var(--space-xl);
+  padding: 10px;
   background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
   color: white;
   border: none;
