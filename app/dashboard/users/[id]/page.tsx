@@ -2,6 +2,7 @@ import { updateUser } from "@/app/actions/actions";
 import { fetchUser } from "@/db/client";
 import styles from "@/styles/detail-page.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const SingleUserPage = async ({
   params,
@@ -11,6 +12,16 @@ const SingleUserPage = async ({
   const { id } = await params;
 
   const user = await fetchUser(id);
+
+  if (!user) {
+    return (
+      <div>
+        <h1>User not found</h1>
+        <p>The user you are looking for does not exist.</p>
+        <Link href="/dashboard/users">Go back to the users page</Link>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.container}>

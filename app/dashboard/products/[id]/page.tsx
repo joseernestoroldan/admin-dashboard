@@ -2,6 +2,7 @@ import { updateProduct } from "@/app/actions/actions";
 import styles from "@/styles/detail-page.module.css";
 import Image from "next/image";
 import { fetchProduct } from "@/db/client";
+import Link from "next/link";
 
 const SingleProductPage = async ({
   params,
@@ -10,6 +11,15 @@ const SingleProductPage = async ({
 }) => {
   const { id } = await params;
   const product = await fetchProduct(id);
+  if (!product) {
+    return (
+      <div>
+        <h1>Product not found</h1>
+        <p>The product you are looking for does not exist.</p>
+        <Link href="/dashboard/products">Go back to the products page</Link>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.container}>
@@ -27,7 +37,7 @@ const SingleProductPage = async ({
           <label>Price</label>
           <input type="number" name="price" placeholder={product.price} />
           <label>Stock</label>
-          <input type="number" name="stock" placeholder={product.stock} />
+          <input type="number" name="stock" placeholder={product.stock.toString()} />
           <label>Color</label>
           <input
             type="text"

@@ -78,7 +78,7 @@ export const addProduct = async (formData: FormData) => {
       data: {
         title: title as string,
         desc: desc as string,
-        price: Number(price),
+        price: String(price),
         stock: Number(stock),
         color: color as string,
         size: size as string,
@@ -101,7 +101,7 @@ export const updateProduct = async (formData: FormData) => {
       data: {
         title: title as string,
         desc: desc as string,
-        price: Number(price),
+        price: String(price),
         stock: Number(stock),
         color: color as string,
         size: size as string,
